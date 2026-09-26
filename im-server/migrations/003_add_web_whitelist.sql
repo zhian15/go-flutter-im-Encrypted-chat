@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS `web_whitelist` (
+  `id`            BIGINT      NOT NULL AUTO_INCREMENT,
+  `domain`        VARCHAR(255) NOT NULL,
+  `display_name`  VARCHAR(128) NOT NULL DEFAULT '',
+  `enabled`       TINYINT(1)   NOT NULL DEFAULT 1,
+  `native_bridge` TINYINT(1)   NOT NULL DEFAULT 0,
+  `created_at`    DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at`    DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_domain` (`domain`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

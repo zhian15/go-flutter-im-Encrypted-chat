@@ -1,0 +1,7 @@
+# 编译 api 服务
+$env:GOOS="linux"; $env:GOARCH="amd64"; $env:CGO_ENABLED="0"; go build -o bin/api ./cmd/api
+
+# 编译 gateway 服务
+go build -o bin/gateway ./cmd/gateway
+
+

@@ -1,0 +1,147 @@
+/**
+ * 设计令牌（Design Tokens）
+ * 全局视觉基线：颜色 / 圆角 / 间距 / 字体 / 阴影 / 动效
+ * 语义令牌统一以 --app- 前缀；同时覆盖 Arco 关键变量以保持组件库一致
+ */
+:root {
+  /* ===== 品牌 / 主色 ===== */
+  --app-primary: #165dff;
+  --app-primary-hover: #4080ff;
+  --app-primary-active: #0e42d2;
+  --app-primary-bg: #e8f3ff;
+  --app-primary-bg-hover: #dbe9ff;
+
+  /* ===== 功能色 ===== */
+  --app-success: #00b42a;
+  --app-success-bg: #e8ffea;
+  --app-warning: #ff7d00;
+  --app-warning-bg: #fff7e8;
+  --app-danger: #f53f3f;
+  --app-danger-bg: #ffece8;
+  --app-info: #14c9c9;
+  --app-info-bg: #e8fffb;
+
+  /* ===== 文字 ===== */
+  --app-text-1: #1d2129;
+  --app-text-2: #4e5969;
+  --app-text-3: #86909c;
+  --app-text-4: #c9cdd4;
+  --app-text-white: #ffffff;
+
+  /* 侧边栏文字（深底） */
+  --app-sider-text: #a9aeb8;
+  --app-sider-text-active: #ffffff;
+  --app-sider-text-hover: #ffffff;
+
+  /* ===== 背景 ===== */
+  --app-bg-page: #f5f7fa;
+  --app-bg-card: #ffffff;
+  --app-bg-elevated: #ffffff;
+  --app-bg-sider: #1d2129;
+  --app-bg-sider-hover: #2a2f37;
+  --app-bg-sider-active: #165dff;
+  --app-bg-header: #ffffff;
+  --app-bg-mask: rgba(29, 33, 41, 0.6);
+
+  /* ===== 边框 ===== */
+  --app-border-1: #e5e6eb;
+  --app-border-2: #f2f3f5;
+  --app-border-sider: #2a2f37;
+
+  /* ===== 圆角 ===== */
+  --app-radius-xs: 4px;
+  --app-radius-sm: 6px;
+  --app-radius-md: 8px;
+  --app-radius-lg: 12px;
+  --app-radius-pill: 999px;
+
+  /* ===== 间距 ===== */
+  --app-space-xs: 4px;
+  --app-space-sm: 8px;
+  --app-space-md: 12px;
+  --app-space-lg: 16px;
+  --app-space-xl: 20px;
+  --app-space-2xl: 24px;
+  --app-space-3xl: 32px;
+
+  /* ===== 字体 ===== */
+  --app-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --app-font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Consolas, monospace;
+  --app-font-size-xs: 12px;
+  --app-font-size-sm: 13px;
+  --app-font-size-base: 14px;
+  --app-font-size-lg: 16px;
+  --app-font-size-xl: 18px;
+  --app-font-size-2xl: 22px;
+  --app-font-size-3xl: 28px;
+  --app-font-weight-normal: 400;
+  --app-font-weight-medium: 500;
+  --app-font-weight-semibold: 600;
+  --app-font-weight-bold: 700;
+  --app-line-height: 1.5715;
+
+  /* ===== 阴影 ===== */
+  --app-shadow-xs: 0 1px 2px rgba(29, 33, 41, 0.04);
+  --app-shadow-sm: 0 2px 6px rgba(29, 33, 41, 0.06);
+  --app-shadow-md: 0 4px 12px rgba(29, 33, 41, 0.08);
+  --app-shadow-lg: 0 8px 24px rgba(29, 33, 41, 0.12);
+  --app-shadow-card: 0 1px 4px rgba(29, 33, 41, 0.04);
+  --app-shadow-sider: 2px 0 8px rgba(29, 33, 41, 0.04);
+
+  /* ===== 过渡 ===== */
+  --app-transition-fast: 0.15s ease;
+  --app-transition-base: 0.2s ease;
+  --app-transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ===== 布局尺寸 ===== */
+  --app-sider-width: 232px;
+  --app-sider-collapsed-width: 64px;
+  --app-header-height: 56px;
+  --app-content-padding: 20px;
+
+  /* ===== Arco 组件变量覆盖（统一组件库视觉） ===== */
+  --border-radius-small: var(--app-radius-sm);
+  --border-radius-medium: var(--app-radius-md);
+  --color-bg-page: var(--app-bg-page);
+}
+
+/* ===== 基础重置 ===== */
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; margin: 0; }
+body {
+  font-family: var(--app-font-sans);
+  font-size: var(--app-font-size-base);
+  line-height: var(--app-line-height);
+  color: var(--app-text-1);
+  background: var(--app-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(29, 33, 41, 0.15); border-radius: var(--app-radius-pill); }
+::-webkit-scrollbar-thumb:hover { background: rgba(29, 33, 41, 0.25); }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* ===== Arco 组件全局美化 ===== */
+/* 卡片：统一轻边框 + 轻阴影，hover 微提升 */
+.arco-card {
+  border: 1px solid var(--app-border-2);
+  box-shadow: var(--app-shadow-card);
+  transition: box-shadow var(--app-transition-base);
+}
+.arco-card:hover { box-shadow: var(--app-shadow-sm); }
+
+/* 表格表头 */
+.arco-table-th {
+  background-color: var(--app-border-2);
+  font-weight: var(--app-font-weight-semibold);
+  color: var(--app-text-2);
+}
+
+/* 按钮 / 输入框圆角 */
+.arco-btn { border-radius: var(--app-radius-md); }
+.arco-input-wrapper { border-radius: var(--app-radius-md); }
+.arco-btn-primary { box-shadow: 0 2px 6px rgba(22, 93, 255, 0.18); }
+.arco-btn-primary:hover { box-shadow: 0 4px 12px rgba(22, 93, 255, 0.28); }
