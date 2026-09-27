@@ -6,13 +6,6 @@
 
 ChatPulse 是一套完整的即时通讯解决方案，包含以下仓库：
 
-| 项目 | 说明 | 仓库地址 |
-|------|------|----------|
-| **im-web** | 后台管理系统（本仓库） | <https://gitee.com/finc123/im-web-admin.git> |
-| **im-server** | Go 后端 API + WebSocket 服务 | <https://gitee.com/finc123/goyuyanjishitongxunhouduan.git> |
-| **im-pc** | PC 客户端（Vue 3） | <https://gitee.com/finc123/vue-instant-messaging-im.git> |
-| **im-mobile** | 移动端 APP（Flutter） | 即将开源 |
-| **im-site** | 官网 / 演示站（Nuxt 3） | <https://gitee.com/finc123/chatpulse-site.git> |
 
 > 建议先部署 `im-server`，再启动本后台，最后接入客户端。
 
